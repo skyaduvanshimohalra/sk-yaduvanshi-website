@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarkari Results Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        .search-box {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .search-box input[type="text"] {
+            width: 70%;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .search-box button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .result-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+        .result-card h3 {
+            margin: 0;
+        }
+        .result-card p {
+            margin: 5px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #003366;
+            color: white;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>skyaduvanshimohalra</h1>
+</header>
+
+<div class="container">
+
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="जॉब / बोर्ड का नाम लिखें...">
+        <button onclick="searchResults()">Search</button>
+    </div>
+
+    <div id="results">
+        <div class="result-card">
+            <h3>SSC CGL 2025 Result</h3>
+            <p>Board: Staff Selection Commission</p>
+            <p>Released Date: 15 जनवरी 2026</p>
+            <a href="#">View Result PDF</a>
+        </div>
+
+        <div class="result-card">
+            <h3>UPPSC PCS Prelims Result</h3>
+            <p>Board: Uttar Pradesh Public Service Commission</p>
+            <p>Released Date: 10 जनवरी 2026</p>
+            <a href="#">View Result PDF</a>
+        </div>
+
+        <!-- Aur results yahin add kar sakte ho -->
+    </div>
+
+</div>
+
+<footer>
+    © 2026े Sk yaduvanshi | All Rights Reserved
+</footer>
+
+<script>
+    function searchResults() {
+        let input = document.getElementById("searchInput").value.toLowerCase();
+        let cards = document.getElementsByClassName("result-card");
+
+        for (let i = 0; i < cards.length; i++) {
+            let text = cards[i].innerText.toLowerCase();
+            if (text.includes(input)) {
+                cards[i].style.display = "block";
+            } else {
+                cards[i].style.display = "none";
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
